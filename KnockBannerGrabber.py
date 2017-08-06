@@ -45,13 +45,20 @@ def ban_grab(host, port, delay) :
     finally :
         s.close()                                                   # Closing socket
 
+def user_input(msg) :                                               # Checking for keyboard interrupt
+    while True :
+        try :
+            return input(msg)
+        except KeyboardInterrupt :
+            print('You are not allowed to quit right now !')
+
 def main() :
-    host = input('Enter IP or URL : ')                              # Taking and validating user inputs
-    port = int(input('Enter port : '))
+    host = user_input('Enter IP or URL : ')                         # Taking and validating user inputs
+    port = int(user_input('Enter port : '))
     if port < 0 or port > 65535 :
         print('Invalid input for port\nDefault set 80')
         port = 80
-    delay = int(input('Enter delay : '))
+    delay = int(user_input('Enter delay : '))
     if delay < 0 or delay > 100 :
         print('Invalid input for delay\nDefault set 5')
         delay = 5
