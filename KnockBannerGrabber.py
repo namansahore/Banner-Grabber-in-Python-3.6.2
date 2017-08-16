@@ -17,7 +17,7 @@ def ban_grab(host, port, delay) :
     :param host:        IP ADDRESS or URL
     :param port:         REQUESTED PORT
     :param delay:      TIME DELAY for SEARCH
-    :return:                 NULL
+    :return:                 None
     '''
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)           # Making a TCP socket
     try :
