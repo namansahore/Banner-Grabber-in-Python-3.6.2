@@ -55,7 +55,7 @@ def user_input(msg) :                                               # Checking f
 def main() :
     host = user_input('Enter IP or URL : ')                         # Taking and validating user inputs
     port = int(user_input('Enter port : '))
-    if port < 0 or port > 65535 :
+    if port < 1 or port > 65535 :
         print('Invalid input for port\nDefault set 80')
         port = 80
     delay = int(user_input('Enter delay : '))
