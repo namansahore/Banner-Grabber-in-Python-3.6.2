@@ -4,7 +4,6 @@ Programming Language:           Python 3.6.2
 Release Date        :           6th August 2017
 Credits             :           Naman Sahore
 E-Mail              :           namanshore@gmail.com
-        For any query please contact
 '''
 import socket
 
